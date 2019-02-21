@@ -1,19 +1,30 @@
 import React from 'react';
+import styled from 'styled-components';
+
+const RepoList = styled.li`
+
+`
+const RepoName = styled.h3``
+const RepoAnchor = styled.a``
+const RepoForkedFromSpan = styled.span``
+const RepoDescrSpan = styled.span``
+const RepoDataContainer = styled.div``
+const RepoMinorSpan = styled.span``
 
 const Repository = (props) => {
-    return   <li>
-                <h3>
-                    <a href='#'>{props.repoName}</a>
-                </h3>
-                <span>Forked From</span>
-                <span>{props.description}</span>
-                <div>
-                    <span>{props.language}</span>
-                    <span>{props.forks}</span>
-                    <span>{props.license}</span>
-                    <span>{props.updated}</span>
-                </div>
-            </li>
+    return   <RepoList>
+                <RepoName>
+                    <RepoAnchor href='#'>{props.repoName}</RepoAnchor>
+                </RepoName>
+                <RepoForkedFromSpan>Forked From</RepoForkedFromSpan>
+                <RepoDescrSpan>{props.description}</RepoDescrSpan>
+                <RepoDataContainer>
+                    <RepoMinorSpan>{props.language}</RepoMinorSpan>
+                    <RepoMinorSpan>{props.forks}</RepoMinorSpan>
+                    <RepoMinorSpan>{props.license}</RepoMinorSpan>
+                    <RepoMinorSpan>{props.updated}</RepoMinorSpan>
+                </RepoDataContainer>
+            </RepoList>
 }
 
 export default Repository;
