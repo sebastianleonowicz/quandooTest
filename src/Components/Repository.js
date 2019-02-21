@@ -2,15 +2,17 @@ import React from 'react';
 
 const Repository = (props) => {
     return   <li>
-                <p>{props.repoName}</p>
+                <h3>
+                    <a href='#'>{props.repoName}</a>
+                </h3>
                 <span>Forked From</span>
-                <span>Description</span>
-                <ul>
-                <li>language</li>
-                <li>number of forks</li>
-                <li>appliable legal MIT/else</li>
-                <li>last update</li>
-                </ul>
+                <span>{props.description}</span>
+                <div>
+                    <span>{props.language}</span>
+                    <span>{props.forks}</span>
+                    <span>{props.license}</span>
+                    <span>{props.updated}</span>
+                </div>
             </li>
 }
 

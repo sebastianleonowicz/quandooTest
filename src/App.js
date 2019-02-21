@@ -24,7 +24,13 @@ class App extends Component {
   createArrayOfComponents (data) {
     console.log(data);
     const componentArray1 = data.map((data) => {
-      return <Repository repoName={data.name}></Repository>
+      return  <Repository repoName={data.name}
+                          language={data.language} 
+                          forks={data.forks}
+                          updated={data.updatedAt}
+                          license={data.spdx_id}
+                          description={data.description}             
+              ></Repository>
     });
     console.log('new data', componentArray1);
     this.setState({
@@ -41,7 +47,7 @@ class App extends Component {
                 <p>array is yet to be created</p>
               </div>
     } else {
-      return  <div className='App'>
+      return  <div className='repositoryList'>
                 <ul>
                   {this.state.componentArray}
                 </ul>
