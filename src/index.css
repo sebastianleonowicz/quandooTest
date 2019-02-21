@@ -12,6 +12,8 @@ html, body {
 .header {
     height: 7rem;
     border-bottom: 1px solid blue;
+    display: flex;
+    justify-content: space-between;
    
 }
 
@@ -23,4 +25,23 @@ html, body {
 .quandooLogo {
     height: 3.5rem;
     width: 16.5rem;
+}
+
+.headerLinks {
+    display: flex;
+ 
+}
+
+.headerLinks > div {
+    flex: 1;
+    width: 15.8rem;
+    
+    font-size: 1.5rem;
+
+
+}
+
+.img {
+    height: 21rem;
+    background-color: lightgrey;
 }
