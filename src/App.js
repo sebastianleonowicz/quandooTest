@@ -22,7 +22,6 @@ class App extends Component {
   }
 
   createArrayOfComponents (data) {
-    console.log(data);
     let license;
     const componentArray1 = data.map((data) => {
       if(data.license !== null) {
@@ -40,7 +39,6 @@ class App extends Component {
       arrayCreated: true,
       componentArray: componentArray1
     })
-    console.log(this.state);
   }
 
 

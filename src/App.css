@@ -15,7 +15,7 @@ li {
 
 .repositoryList {
   padding-top: 6rem;
-  width: 98rem;
+  max-width: 98rem;
   margin: 0 auto;
   font-size: 1rem;
 }
@@ -30,4 +30,14 @@ li {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 420px) {
+  html, body {
+    font-size: 8px;
+  }
+
+  .repositoryList {
+    padding-top: 3rem;
+  }
 }

@@ -4,6 +4,10 @@ import styled from 'styled-components';
 const RepoList = styled.li`
     padding: 1.5rem 2rem;
     width: 50%;
+
+    @media only screen and (max-width: 420px) {
+        width: 100%;
+    }
 `
 const RepoName = styled.h3`
     font-size: 2rem;
