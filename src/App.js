@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import './App.css';
+import Repository from './Components/Repository'
 
 const axios = require('axios');
 
 class App extends Component {
 
   state = {
+    arrayCreated: false,
     componentArray: []
   }
 
@@ -21,37 +23,30 @@ class App extends Component {
 
   createArrayOfComponents (data) {
     console.log(data);
-    const componentArray = data.map((data) => {
-      return  <div>
-                <ul>
-                  <li>
-                    <p>RepoName</p>
-                    <span>Forked From</span>
-                    <span>Description</span>
-                    <ul>
-                      <li>language</li>
-                      <li>number of forks</li>
-                      <li>appliable legal MIT/else</li>
-                      <li>last update</li>
-                    </ul>
-                  </li>
-                </ul>
-              </div>
+    const componentArray1 = data.map((data) => {
+      return <Repository repoName={data.name}></Repository>
     });
-    console.log('new data', componentArray);
+    console.log('new data', componentArray1);
     this.setState({
-      componentArray: componentArray
+      arrayCreated: true,
+      componentArray: componentArray1
     })
     console.log(this.state);
   }
 
 
   render() {
-    return (
-      <div className="App">
-        <div>Component 2</div>
-      </div>
-    );
+    if(!this.state.arrayCreated) {
+      return  <div className='App'>
+                <p>array is yet to be created</p>
+              </div>
+    } else {
+      return  <div className='App'>
+                <ul>
+                  {this.state.componentArray}
+                </ul>
+              </div>
+    }
   }
 }
 
