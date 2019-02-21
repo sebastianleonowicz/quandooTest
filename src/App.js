@@ -23,16 +23,19 @@ class App extends Component {
 
   createArrayOfComponents (data) {
     console.log(data);
+    let license;
     const componentArray1 = data.map((data) => {
+      if(data.license !== null) {
+        license = data.license.spdx_id;
+      }
       return  <Repository repoName={data.name}
                           language={data.language} 
                           forks={data.forks}
-                          updated={data.updatedAt}
-                          license={data.spdx_id}
+                          updated={data.updated_at.substring(0, 10)}
+                          license={license}
                           description={data.description}             
               ></Repository>
     });
-    console.log('new data', componentArray1);
     this.setState({
       arrayCreated: true,
       componentArray: componentArray1
