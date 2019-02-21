@@ -1,14 +1,26 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+html, body {
+    font-family: 'Oswald', sans-serif;
+    font-size: 10px;
+}
+  
+.header {
+    height: 7rem;
+    border-bottom: 1px solid blue;
+   
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+.headerLogo {
+    padding: 2rem 0 0 4rem;
+    width: 20.5rem;
+}
+
+.quandooLogo {
+    height: 3.5rem;
+    width: 16.5rem;
 }
