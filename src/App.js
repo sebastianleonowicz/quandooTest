@@ -48,7 +48,8 @@ class App extends Component {
               </div>
     } else {
       return  <div className='repositoryList'>
-                <ul>
+                <h2 className='listHeader'>Repository List</h2>
+                <ul className='repoList'>
                   {this.state.componentArray}
                 </ul>
               </div>
