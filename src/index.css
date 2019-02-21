@@ -58,20 +58,22 @@ a:visited {
 
 .img {
     height: 21rem;
-    background-color: lightgrey;
+    background-image: url('../src/styles/quandoo\ kadr.jpg');
+    background-size: cover;
+    
 }
 
-@media only screen and (max-width: 420px) {
+@media only screen and (max-width: 620px) {
     .headerLinks {
         display: none;
     }
 
     .header {
-        height: 5rem;
+        height: 7rem;
     }
 
     .headerLogo {
-        padding: 1.5rem 0 0 1.5rem;
+        padding: 2.5rem 0 0 1.5rem;
         width: 20.5rem;
     }
 
